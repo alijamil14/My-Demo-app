@@ -38,4 +38,19 @@ st.write("Your hobby is:" , hobby)
 st.button("CLice Me For Save", type='primary')
 
 
-st.slider()
+hobby = st.selectbox("Hobbies: ",
+                     ['Dancing', 'Reading', 'Sports'])
+ 
+# print the selected hobby
+st.write("Your hobby is: ", hobby)
+
+hobbies = st.multiselect("Hobbies: ",
+                         ['Dancing', 'Reading', 'Sports'])
+ 
+# write the selected options
+st.write("You selected", len(hobbies), hobbies, 'hobbies')
+
+if st.button("Click me for no reason", type='primary'):
+    st.write('Hello')
+
+level = st.slider("Select the level", 1, 10)
